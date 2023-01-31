@@ -1,8 +1,8 @@
 import ReactDOM from 'react-dom/client';
-import './styles/index.css';
+import { Nav } from './components/nav/nav.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<>
-		<h1>Work Match</h1>
+		<Nav />
 	</>
 );
