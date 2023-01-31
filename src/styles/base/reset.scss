@@ -71,13 +71,6 @@ form , input, textarea, select , button , label{
     /* (Opcional) */ appearance: none;
 }
 
-/* Evitamos problemas con los SVG */
-svg{
-    width: 100%;
-    display: block;
-    fill: currentColor;
-}
-
 /* Configuramos la tipografía para toda la web */
 body {
     min-height  : 100vh;
