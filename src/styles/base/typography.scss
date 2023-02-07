@@ -1,4 +1,6 @@
 html{
-    font-family: 'Montserrat', sans-serif;
-    //font-family: 'Permanent Marker', cursive;
+    font-family: $font-primary;
+    font-size: $font-m;
+    font-weight: $font-regular;
+    color: $color-text-primary; 
 }

@@ -1,4 +1,4 @@
-const SvgComponent = (props) => (
+export function WorkMatchIcon(props) {
 	<svg
 		width={132}
 		height={39}
@@ -29,7 +29,5 @@ const SvgComponent = (props) => (
 				<path fill='#fff' d='M0 0h132v39H0z' />
 			</clipPath>
 		</defs>
-	</svg>
-);
-
-export default SvgComponent;
+	</svg>;
+}

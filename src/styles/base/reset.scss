@@ -56,7 +56,7 @@ h1 , h2 , h3 , h4 , h5 , h6 , p ,span , a , strong , blockquote , i , b , u , em
 
 /* (Opcional) Configuramos el texto que seleccionamos */
 ::selection {
-    background-color: rgb(30, 255, 0);
+    background-color: $color-primary;
     color: #fff;
 }
 
@@ -74,6 +74,6 @@ form , input, textarea, select , button , label{
 /* Configuramos la tipografía para toda la web */
 body {
     min-height  : 100vh;
-    font-size   : 100%;
+    background-color: $color-background;
 }
   
