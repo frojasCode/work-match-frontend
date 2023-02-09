@@ -1,9 +1,9 @@
 import ReactDOM from 'react-dom/client';
 import './styles/main.scss';
-import { Nav } from './components/nav/Nav';
+import { NavComponent } from './components/Nav/Nav';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<>
-		<Nav />
+		<NavComponent />
 	</>
 );
