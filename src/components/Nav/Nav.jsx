@@ -1,7 +1,6 @@
 import { colorPrimary, size32 } from '../../assets/icons/variablesIcons';
 import { IconMenu2 } from '@tabler/icons-react';
 import { WorkMatchLogo } from '../../assets/icons/WorkMatchLogo';
-
 export function NavComponent() {
 	return (
 		<nav className='NavComponent'>

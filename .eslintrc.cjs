@@ -15,4 +15,7 @@ module.exports = {
 		sourceType: 'module',
 	},
 	plugins: ['react'],
+	rules: {
+		'react/no-unknown-property': 'off',
+	},
 };
