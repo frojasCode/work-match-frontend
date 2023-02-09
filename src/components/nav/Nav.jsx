@@ -1,3 +1,7 @@
 export function Nav() {
-	return <h1>WorkMatch</h1>;
+	return (
+		<>
+			<h1>WorkMatch</h1>
+		</>
+	);
 }

@@ -9,18 +9,21 @@ $color-white: #FFF;
 $color-black: #000;
 
 //FONT SIZE
-$font-xs: 12px;
-$font-s: 14px;
-$font-m: 16px;
-$font-l: 18px;
-$font-xl: 20px;
-$font-2xl: 32px;
+$font-size--2: clamp(0.79rem, calc(0.73rem + 0.28vw), 0.96rem);
+$font-size--1: clamp(0.89rem, calc(0.79rem + 0.52vw), 1.20rem);
+$font-size-0: clamp(1.00rem, calc(0.83rem + 0.83vw), 1.50rem);
+$font-size-1: clamp(1.13rem, calc(0.88rem + 1.25vw), 1.88rem);
+$font-size-2: clamp(1.27rem, calc(0.91rem + 1.80vw), 2.34rem);
+$font-size-3: clamp(1.42rem, calc(0.92rem + 2.51vw), 2.93rem);
+$font-size-4: clamp(1.60rem, calc(0.92rem + 3.43vw), 3.66rem);
+$font-size-5: clamp(1.80rem, calc(0.88rem + 4.63vw), 4.58rem);
 
 //FONT WEIGHT
 $font-regular: 400;
+$font-medium: 500;
 $font-semibold: 600;
 $font-bold: 700;
 
 //FONT FAMILY
 $font-primary: 'Montserrat', san-serif;
-$font-header: 'Permanent Marker', cursive;
+$font-permanent-marker: 'Permanent Marker', cursive;

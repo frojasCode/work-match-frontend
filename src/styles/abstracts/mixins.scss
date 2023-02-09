@@ -1,0 +1,21 @@
+// MEDIA QUERYS MANAGER
+@mixin responsive($display-type) {
+    @if $display-type == phone {
+        @media (max-width: 599px) { @content; }
+    } @else if $display-type == tablet-portrait {
+        @media (min-width: 600px) { @content; }
+    } @else if $display-type == tablet-landscape {
+        @media (min-width: 900px) { @content; }
+    } @else if $display-type == desktop {
+        @media (min-width: 1200px) { @content; }
+    } @else if $display-type == big-desktop {
+        @media (min-width: 1500px) { @content; }
+    }
+}
+
+/* @mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */

@@ -1,0 +1,13 @@
+::selection {
+    background-color: $color-primary;
+    color: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height  : 100vh;
+    background-color: $color-background;
+}
