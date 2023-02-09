@@ -1,22 +1,22 @@
 //COLORS
-$color-primary: #FF3E40;
-$color-secondary: #CC3336;
-$color-tertiary: #FF6A6C;
-$color-text-primary: #5E5E5E;
-$color-text-secondary: #9F9F9F;
-$color-background: #F9F9F9;
-$color-white: #FFF;
+$color-primary: #ff3e40;
+$color-secondary: #cc3336;
+$color-tertiary: #ff6a6c;
+$color-text-primary: #5e5e5e;
+$color-text-secondary: #9f9f9f;
+$color-background: #f9f9f9;
+$color-white: #fff;
 $color-black: #000;
 
 //FONT SIZE
 $font-size--2: clamp(0.79rem, calc(0.73rem + 0.28vw), 0.96rem);
-$font-size--1: clamp(0.89rem, calc(0.79rem + 0.52vw), 1.20rem);
-$font-size-0: clamp(1.00rem, calc(0.83rem + 0.83vw), 1.50rem);
+$font-size--1: clamp(0.89rem, calc(0.79rem + 0.52vw), 1.2rem);
+$font-size-0: clamp(1rem, calc(0.83rem + 0.83vw), 1.5rem);
 $font-size-1: clamp(1.13rem, calc(0.88rem + 1.25vw), 1.88rem);
-$font-size-2: clamp(1.27rem, calc(0.91rem + 1.80vw), 2.34rem);
+$font-size-2: clamp(1.27rem, calc(0.91rem + 1.8vw), 2.34rem);
 $font-size-3: clamp(1.42rem, calc(0.92rem + 2.51vw), 2.93rem);
-$font-size-4: clamp(1.60rem, calc(0.92rem + 3.43vw), 3.66rem);
-$font-size-5: clamp(1.80rem, calc(0.88rem + 4.63vw), 4.58rem);
+$font-size-4: clamp(1.6rem, calc(0.92rem + 3.43vw), 3.66rem);
+$font-size-5: clamp(1.8rem, calc(0.88rem + 4.63vw), 4.58rem);
 
 //FONT WEIGHT
 $font-regular: 400;
