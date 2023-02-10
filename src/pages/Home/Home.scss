@@ -1,0 +1,39 @@
+.home{
+
+    &Header{
+        background-color: $color-primary;
+        margin-top: 64px;
+        min-height: 100vh;
+
+        &-wrapper{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(264px, 1fr));
+            z-index: 10;
+        }
+
+        &-paragraph{
+            width: 60%;
+
+            p{
+                color: $color-white;
+                font-size: $font-size-5;
+                font-weight: $font-bold;
+    
+                span{
+                    font-family: $font-permanent-marker;
+                    font-size: clamp(2.8rem, calc(0.88rem + 4.63vw), 5.58rem);
+                    font-weight: $font-regular;
+                }
+            }
+        }
+        
+        &-image{
+            width: 80%;
+            place-self: end center;
+
+            img{
+                margin-top: -2rem;
+            }
+        }
+    }
+}
