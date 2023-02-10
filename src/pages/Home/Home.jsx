@@ -2,7 +2,10 @@ import { NavComponent } from '../../components/Nav/Nav';
 import IllustrationHeader from '../../assets/illustrations/illustration-home-header.png';
 import IllustrationFooter from '../../assets/illustrations/illustration-home-footer.png';
 import { Polygon } from '../../assets/icons/Polygon';
-import { colorSecondary } from '../../assets/icons/variablesIcons';
+import {
+	colorSecondary,
+	colorTertiary,
+} from '../../assets/icons/variablesIcons';
 
 export function Home() {
 	return (
@@ -21,15 +24,15 @@ export function Home() {
 						</div>
 					</div>
 				</div>
-				{/* <div className='homeHeader-polygon-1'>
-					<Polygon size={256} colorStroke={colorSecondary} widthStroke={12} />
+				<div className='homeHeader-polygon homeHeader-polygon-1'>
+					<Polygon size={420} colorStroke={colorTertiary} widthStroke={10} />
 				</div>
-				<div className='homeHeader-polygon-2'>
-					<Polygon size={256} colorStroke={colorSecondary} widthStroke={12} />
+				<div className='homeHeader-polygon homeHeader-polygon-2'>
+					<Polygon size={596} colorStroke={colorTertiary} widthStroke={6} />
 				</div>
-				<div className='homeHeader-polygon-3'>
-					<Polygon size={256} colorStroke={colorSecondary} widthStroke={12} />
-				</div> */}
+				<div className='homeHeader-polygon homeHeader-polygon-3'>
+					<Polygon size={350} colorStroke={colorSecondary} widthStroke={10} />
+				</div>
 			</header>
 		</>
 	);

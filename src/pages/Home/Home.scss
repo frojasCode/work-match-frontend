@@ -1,11 +1,13 @@
 .home{
 
     &Header{
+        position: relative;
         background-color: $color-primary;
         margin-top: 64px;
-        min-height: 100vh;
+        overflow: hidden;
 
         &-wrapper{
+            position: relative;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(264px, 1fr));
             z-index: 10;
@@ -33,6 +35,41 @@
 
             img{
                 margin-top: -2rem;
+            }
+        }
+
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: -58%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 50%;
+            width: 150vw;
+            border-radius: 50%;
+            background-color: $color-background;
+            box-shadow: 0 5px 10px rgba($color-text-primary, .5) inset;
+        }
+
+        &-polygon{
+            position: absolute;
+
+            &-1{
+                transform: rotate(100deg);
+                top: -12rem;
+                left: -15rem;
+            }
+
+            &-2{
+                transform: rotate(40deg);
+                top: 3rem;
+                right: -15rem;
+            }
+
+            &-3{
+                transform: rotate(15deg);
+                bottom: -3rem;
+                right: -6rem;
             }
         }
     }
