@@ -22,3 +22,11 @@ export function Switch({ children }) {
 		</div>
 	);
 }
+
+/* 
+	PARA USAR EL SWITCH CON CHILDREN
+
+	<Switch>
+		Ver empresas que tengan <span>propósitos y valores:</span>
+	</Switch>
+*/

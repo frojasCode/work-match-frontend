@@ -6,6 +6,8 @@ import {
 	colorSecondary,
 	colorTertiary,
 } from '../../assets/icons/variablesIcons';
+import { Select } from '../../components/Select/Select';
+import { Switch } from '../../components/Switch/Swithc';
 
 export function Home() {
 	return (
@@ -41,6 +43,29 @@ export function Home() {
 							<p>Al elegir tu nueva empresa para trabajar</p>
 							<h1>¿Qué es lo más importante para ti?</h1>
 						</div>
+						<div className='homeMain-inputs'>
+							<Select>
+								El <span>sector económico:</span>
+							</Select>
+							<Select>
+								¿En <span>región</span> opera?
+							</Select>
+							<Select>
+								Selecciona el <span>tamaño de la empresa:</span>
+							</Select>
+							<Switch>
+								Ver empresas que tengan <span>propósito y valores:</span>
+							</Switch>
+							<Switch>
+								Empresas con <span>premios y certificaciones:</span>
+							</Switch>
+							<Switch>
+								Empresas con <span>avisos publicados:</span>
+							</Switch>
+						</div>
+					</div>
+					<div className='homeMain-illustration'>
+						<img src={IllustrationFooter} alt='' />
 					</div>
 				</main>
 				<footer className='homeFooter'>

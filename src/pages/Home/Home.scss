@@ -92,6 +92,21 @@
                 font-weight: $font-bold;
             }
         }
+
+        &-inputs{
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin: 24px 0;
+        }
+
+        &-illustration{
+            position: relative;
+            width: 50%;
+            margin-inline: auto;
+            margin-bottom: -1rem;
+            z-index: -1;
+        }
     }
 
     &Footer{
