@@ -1,37 +1,60 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { IconChevronDown } from '@tabler/icons-react';
 import { size24, colorPrimary } from '../../assets/icons/variablesIcons';
 
-const selectList = ['option0', 'option1', 'option2', 'option3', 'option4'];
-const selectList2 = ['a', 'b', 'c', 'd', 'e'];
+export function Select({ children, label, labelBold }) {
+	const [active, setActive] = useState(false);
+	const [defaultValue, setDefaultValue] = useState('Seleccionar');
 
-export function Select({ children, list }) {
-	const [clickActive, setClickActive] = useState(false);
-	const [focusActive, setFocusActive] = useState(false);
+	const inputRef = useRef(null);
 
-	/* console.log(e.target.textContent); */
+	useEffect(() => {
+		const referencia = inputRef.current;
 
-	/* password.addEventListener('focus', (event) => {
-		event.target.style.background = 'pink';
-	  }); */
+		referencia.addEventListener('blur', () => {
+			setTimeout(function () {
+				setActive(false);
+			}, 100);
+		});
+
+		return () => {};
+	}, []);
+
+	function handleSelected() {
+		setActive(!active);
+	}
+
+	function handleSelectOption(e) {
+		setDefaultValue(e.target.textContent);
+		setActive(!active);
+	}
 
 	return (
 		<div className='selectContainer'>
-			<div className='selectLabel'>{children}</div>
-			<button className='selectSelected'>
+			<div className='selectLabel'>
+				{label} <span>{labelBold}</span>
+			</div>
+			<button
+				className='selectSelected'
+				onClick={handleSelected}
+				ref={inputRef}
+			>
 				<div className='selectSelected-flex'>
-					<div>Seleccionar</div>
-					<IconChevronDown size={size24} color={colorPrimary} />
+					<div>{defaultValue}</div>
+					<IconChevronDown
+						size={size24}
+						color={colorPrimary}
+						className='selectSelected-icon'
+					/>
 				</div>
 			</button>
-			<div className='selectOptions'>
-				{selectList.map((element, index) => {
-					return (
-						<div className='selectOpion' key={index}>
-							{element}
-						</div>
-					);
-				})}
+			<div className={active ? 'selectOptions active' : 'selectOptions'}>
+				<div className='selectOpion' onClick={handleSelectOption}>
+					franco
+				</div>
+				<div className='selectOpion' onClick={handleSelectOption}>
+					paolo
+				</div>
 			</div>
 		</div>
 	);

@@ -6,6 +6,8 @@ import { Select } from './components/Select/Select';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<>
-		<Home />
+		<Select label='El' labelBold='sector económico:'>
+			El <span>sector económico:</span>
+		</Select>
 	</>
 );
