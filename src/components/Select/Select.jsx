@@ -11,7 +11,7 @@ export function Select({ children, label, labelBold }) {
 	useEffect(() => {
 		const referencia = inputRef.current;
 
-		referencia.addEventListener('blur', () => {
+		referencia.addEventListener('focusout', () => {
 			setTimeout(function () {
 				setActive(false);
 			}, 100);
