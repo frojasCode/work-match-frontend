@@ -3,7 +3,7 @@ import certificationIcon from '../../assets/Certification/check.svg';
 
 export const Certification = ({ isoNumber, year, certificationName }) => {
 	return (
-		<section class="certification-section">
+		<section className="certification-section">
 			<div className='certification-wrapper'>
 				<article className='certification-container'>
 					<span className='certification-title'>ISO</span>

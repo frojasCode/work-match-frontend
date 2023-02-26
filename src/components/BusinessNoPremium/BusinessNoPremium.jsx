@@ -5,9 +5,13 @@ import { Certification } from '../Certification/Certification';
 import { BusinessCard } from '../../components/BusinessCard/BusinessCard';
 
 import './BusinessNoPremium.scss';
+import { BusinessNoCard } from '../BusinessNoCard/BusinessNoCard';
 export const BusinessNoPremium = () => {
 	return (
 		<>
+			<BusinessNoCard />
+
+			
 			<BusinessInformation
 				buttonText='Ver más'
 				text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae elit est. Praesent sit amet rhoncus magna elitar...'
@@ -81,11 +85,13 @@ export const BusinessNoPremium = () => {
 				id={'BCP'}
 				isSaved={false}
 				key={'BCP'}
-				name="Banco de credito del..."
+				name='Banco de credito del...'
 				links={['Premios y certi.', 'Propositos y val.', 'Avisos publicados']}
-				workerSize="De 15 a 50 trabajadores"
-				area={"Financiero"}
-				logoUrl={"https://yt3.googleusercontent.com/KlFkIERbQ9w5R-6mg3OgX_ifWmesDciCaZ7n74dSr1lwJM_C0nDS_jre3AIoiaop4d3rss8sjg=s900-c-k-c0x00ffffff-no-rj"}
+				workerSize='De 15 a 50 trabajadores'
+				area={'Financiero'}
+				logoUrl={
+					'https://yt3.googleusercontent.com/KlFkIERbQ9w5R-6mg3OgX_ifWmesDciCaZ7n74dSr1lwJM_C0nDS_jre3AIoiaop4d3rss8sjg=s900-c-k-c0x00ffffff-no-rj	'
+				}
 			/>
 		</>
 	);
