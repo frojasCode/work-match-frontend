@@ -1,0 +1,45 @@
+.awards-image {
+	max-width: 160px;
+	min-width: 160px;
+	height: 160px;
+	background: url('../../assets/Awards/Container.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+
+	align-items: center;
+    padding-top: 20px;
+
+	.awards-title {
+		margin-top: 5px;
+		color: #cc3336;
+		font-weight: 700;
+		margin-right: 6px;
+	}
+
+	.awards-subtitle {
+		color: #cc3336;
+		font-size: 0.75rem;
+        width: 90px;
+        text-align: center;
+		line-height: 10px;
+		margin-right: 6px;
+	}
+
+	.awards-place {
+		font-size: 2.5rem;
+		color: #ff3e40;
+		margin-right: 6px;
+		margin-top: -5px;
+	}
+
+	.awards-year {
+		font-size: 0.75rem;
+		font-weight: 500;
+		color: #5e5e5e;
+		position: relative;
+		bottom: 5%;
+		margin-right: 6px;
+	}
+}

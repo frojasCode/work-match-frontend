@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import { IconChevronDown } from '@tabler/icons-react';
 import { size24, colorPrimary } from '../../assets/icons/variablesIcons';
+import { SelectOption } from '../SelectOption/SelectOption';
 
-export function Select({ children, label, labelBold }) {
+export function Select({ children, label, labelBold, options }) {
 	const [active, setActive] = useState(false);
 	const [defaultValue, setDefaultValue] = useState('Seleccionar');
 
@@ -21,11 +22,6 @@ export function Select({ children, label, labelBold }) {
 	}, []);
 
 	function handleSelected() {
-		setActive(!active);
-	}
-
-	function handleSelectOption(e) {
-		setDefaultValue(e.target.textContent);
 		setActive(!active);
 	}
 
@@ -48,14 +44,7 @@ export function Select({ children, label, labelBold }) {
 					/>
 				</div>
 			</button>
-			<div className={active ? 'selectOptions active' : 'selectOptions'}>
-				<div className='selectOpion' onClick={handleSelectOption}>
-					franco
-				</div>
-				<div className='selectOpion' onClick={handleSelectOption}>
-					paolo
-				</div>
-			</div>
+			<SelectOption options={options} active={active} setActive={setActive} setDefaultValue={setDefaultValue}/>
 		</div>
 	);
 }

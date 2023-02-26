@@ -1,16 +1,19 @@
 import { colorPrimary, size32 } from '../../assets/icons/variablesIcons';
 import { IconMenu2 } from '@tabler/icons-react';
 import { WorkMatchLogo } from '../../assets/icons/WorkMatchLogo';
+import { Outlet } from 'react-router';
 export function NavComponent() {
 	return (
-		<nav className='NavComponent'>
-			<div className='container'>
-				<div className='NavComponent-wrapper'>
-					{/* <IconArrowLeft color={colorPrimary} size={size32} /> */}
-					<WorkMatchLogo size={32} />
-					<IconMenu2 color={colorPrimary} size={size32} />
+		<main>
+			<nav className='NavComponent'>
+				<div className='container'>
+					<div className='NavComponent-wrapper'>
+						<WorkMatchLogo size={32} />
+						<IconMenu2 color={colorPrimary} size={size32} />
+					</div>
 				</div>
-			</div>
-		</nav>
+			</nav>
+			<Outlet />
+		</main>
 	);
 }

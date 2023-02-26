@@ -1,0 +1,52 @@
+.certification-section {
+	display: flex;
+	flex-direction: row;
+	margin: 25px 0px;
+	justify-content: center;
+	align-items: center;
+	.certification-wrapper {
+		max-width: 160px;
+		min-width: 160px;
+	}
+	.certification-container {
+		max-width: 140px;
+		background: linear-gradient(130.95deg, #e5e5e5 0.57%, #ffffff 99.43%);
+		box-shadow: 4.24242px 8.48485px 16.9697px #c5c8cf;
+		border-radius: 8px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 12px 25px;
+
+		.certification-title {
+			font-weight: 700;
+			font-size: 16px;
+			color: #cc3336;
+		}
+
+		.certification-number {
+			font-weight: 400;
+			font-size: 12px;
+			text-align: center;
+			color: #cc3336;
+		}
+
+		.certification-year {
+			font-weight: 500;
+			font-size: 12px;
+			color: #5e5e5e;
+		}
+
+		img {
+			width: 30px;
+			height: 30px;
+		}
+	}
+
+	.certification-name {
+		font-weight: 600;
+		font-size: 1rem;
+		color: #9f9f9f;
+	}
+}

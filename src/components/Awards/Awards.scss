@@ -1,0 +1,14 @@
+.awards-container {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	.awards-text {
+		display: flex;
+		flex-direction: column;
+		font-size: 1rem;
+		color: #9f9f9f;
+		.awards-text-subtitle {
+			font-weight: 600;
+		}
+	}
+}

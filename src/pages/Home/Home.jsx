@@ -7,13 +7,18 @@ import {
 	colorTertiary,
 } from '../../assets/icons/variablesIcons';
 import { Select } from '../../components/Select/Select';
-import { Switch } from '../../components/Switch/Swithc';
+import { Switch } from '../../components/Switch/Switch';
+import { useNavigate } from 'react-router-dom';
 
 export function Home() {
+	const navigate = useNavigate();
+
+	const handleClick = () => {
+		navigate("search")
+	}
 	return (
 		<>
 			<section className='home'>
-				<NavComponent />
 				<header className='homeHeader'>
 					<div className='container'>
 						<div className='homeHeader-wrapper'>
@@ -23,7 +28,7 @@ export function Home() {
 								</p>
 							</div>
 							<div className='homeHeader-image'>
-								<img src={IllustrationHeader} alt='' />
+								<img src={IllustrationHeader} alt='Header Ilustration' />
 							</div>
 						</div>
 					</div>
@@ -44,13 +49,13 @@ export function Home() {
 							<h1>¿Qué es lo más importante para ti?</h1>
 						</div>
 						<div className='homeMain-inputs'>
-							<Select>
+							<Select options={["Sector1","Sector2", "Sector3"]}>
 								El <span>sector económico:</span>
 							</Select>
-							<Select>
+							<Select options={["Sector1","Sector2", "Sector3"]}>
 								¿En <span>región</span> opera?
 							</Select>
-							<Select>
+							<Select options={["Sector1","Sector2", "Sector3"]}>
 								Selecciona el <span>tamaño de la empresa:</span>
 							</Select>
 							<Switch>
@@ -62,10 +67,12 @@ export function Home() {
 							<Switch>
 								Empresas con <span>avisos publicados:</span>
 							</Switch>
+
+							<button className='btn-primary' onClick={handleClick}>Buscar	</button>
 						</div>
 					</div>
 					<div className='homeMain-illustration'>
-						<img src={IllustrationFooter} alt='' />
+						<img src={IllustrationFooter} alt='Footer ilustration' />
 					</div>
 				</main>
 				<footer className='homeFooter'>

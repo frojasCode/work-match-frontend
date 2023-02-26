@@ -1,0 +1,77 @@
+.business-card {
+	width: 90%;
+	margin: auto;
+	margin-top: 50px;
+	background: #ffffff;
+	box-shadow: 0px 0px 12px rgba(225, 225, 225, 0.8);
+	border-radius: 24px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 25px 15px;
+
+	.business-info-title {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		border-radius: 10%;
+		margin-bottom: 10px;
+		.business-image-container {
+			border: 1px solid #9f9f9f;
+			width: 90px;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			margin-right: 5px;
+			border-radius: 10%;
+			img {
+				width: 40px;
+				height: 40px;
+			}
+		}
+		.business-name {
+			font-weight: bold;
+			font-size: 1.25rem;
+		}
+	}
+	.business-links {
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	.business-info-detail {
+        margin-top: 10px;
+		display: flex;
+
+		.business-info {
+			font-size: 0.75rem;
+			color: #9f9f9f;
+
+            .hr {
+                display: block;
+                margin: 4px 0px 4px 25px;
+                width: 35px;
+                height: 1.5px;
+                background-color: #9F9F9F;
+                opacity: 0.7;
+            }
+			div {
+				display: flex;
+				img {
+					width: 16px;
+					height: 16px;
+                    margin-right: 10px;
+				}
+			}
+		}
+
+		.img-bookmark {
+			position: relative;
+			left: 20%;
+			top: 20px;
+			width: 24px;
+			height: 24px;
+		}
+	}
+}
