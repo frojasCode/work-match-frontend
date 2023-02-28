@@ -1,0 +1,44 @@
+.my-account-card-container {
+	display: flex;
+	gap: 15px;
+	width: 100%;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: white;
+	padding: 25px;
+	border-radius: 25px;
+
+	img {
+		border-radius: 15px;
+		width: 50px;
+		height: auto;
+		margin-bottom: auto;
+	}
+
+	.my-account-user-info {
+		display: flex;
+		flex-direction: column;
+		.my-account-user-name-info {
+			display: flex;
+			flex-direction: column;
+			span {
+				margin-top: 1px;
+				font-weight: 600;
+				font-size: 1.125;
+				color: #ff3e40;
+			}
+		}
+		.my-account-user-email {
+			font-weight: 400;
+			font-size: 0.75rem;
+			color: #5e5e5e;
+			margin-bottom: 20px;
+		}
+		.my-account-edit-profile {
+			font-weight: 600;
+			font-size: 1rem;
+			text-decoration-line: underline;
+			color: #ff3e40;
+		}
+	}
+}

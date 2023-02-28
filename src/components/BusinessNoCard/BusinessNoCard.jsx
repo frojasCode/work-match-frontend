@@ -4,7 +4,7 @@ import bookmarkIcon from '../../assets/BusinessCard/bookmark.svg';
 
 import './BusinessNoCard.scss';
 
-export const BusinessNoCard = () => {
+export const BusinessNoCard = ({imgNegativeMT = "0px"}) => {
 	const mockData = {
 		id: '1',
 		name: 'Hipermercados Tottus',
@@ -14,12 +14,13 @@ export const BusinessNoCard = () => {
 		area: 'Financiero',
 		workerSize: 'De 15 a 50 traba.',
 		isSaved: false,
+		
 	};
 
 	return (
 		<div className='business-no-card-container'>
 			<div className='img-container-wrapper'>
-				<div className='img-container'>
+				<div className='img-container' style={{marginTop: imgNegativeMT}}>
 					<img
 						src={mockData.imgUrl}
 						alt='business logo'

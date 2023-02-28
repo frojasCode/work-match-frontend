@@ -14,7 +14,7 @@ export const Business = () => {
 		area: 'Financiero',
 		workerSize: 'De 15 a 50 trabajadores',
 		isSaved: false,
-		isPremium: false,
+		isPremium: true,
 	};
 
 	return (

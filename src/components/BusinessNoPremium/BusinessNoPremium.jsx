@@ -12,22 +12,30 @@ export const BusinessNoPremium = () => {
 			<BusinessNoCard />
 
 			<BusinessInformation
-				buttonText='Ver más'
 				text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae elit est. Praesent sit amet rhoncus magna elitar...'
 				title='¿Por qué nosotros?'
 				key='¿Por qué nosotros?'
 				showButton={true}
-			/>
+			>
+				<>
+					<BusinessInformation text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae elit est. Praesent sit amet rhoncus magna elitar..."}/>
+					<BusinessInformation text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae elit est. Praesent sit amet rhoncus magna elitar..."}/>
+				</>
+			</BusinessInformation>
 
 			<BusinessInformation
 				title='¿En qué creemos?'
 				text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae elit est.'
 				key='¿En qué creemos?'
 				showButton={true}
-				buttonText='Ver más'
 				subTitle='Misión'
-			/>
-			
+			>
+				<>
+				<BusinessInformation subTitle={"Vision"} text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae elit est."/>
+				<BusinessInformation valores={["test1","test2", "test3", "test4"]}/>
+				 </>
+			</BusinessInformation>
+
 			<AvisosPublicados />
 
 			<h2 className='business-information-sub-title'>Premios</h2>

@@ -1,0 +1,25 @@
+.my-account-tabs {
+	.my-account-tabs-list {
+		margin: 25px 0px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		ul {
+			display: flex;
+			gap: 15px;
+			li {
+				padding: 10px;
+				font-size: 0.9rem;
+				font-weight: 500;
+				border-radius: 15px;
+			}
+			li.active {
+				background-color: white;
+			}
+		}
+	}
+	.my-account-tabs-wrapper {
+		width: 100%;
+	}
+}

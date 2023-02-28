@@ -1,0 +1,15 @@
+.my-account-container {
+	margin: 100px auto auto auto;
+	width: 90%;
+	.my-account-footer {
+		position: relative;
+		top: 200px;
+		font-weight: 600;
+		font-size: 0.75rem;
+		text-align: center;
+		color: #5e5e5e;
+        word-break: break-all;
+        display: flex;
+        justify-content: center;
+	}
+}
