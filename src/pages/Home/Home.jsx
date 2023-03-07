@@ -68,7 +68,7 @@ export function Home() {
 								Empresas con <span>avisos publicados:</span>
 							</Switch>
 
-							<button className='btn-primary' onClick={handleClick}>Buscar	</button>
+							<button className='btn-primary' onClick={handleClick}>Buscar</button>
 						</div>
 					</div>
 					<div className='homeMain-illustration'>

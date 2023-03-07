@@ -2,15 +2,15 @@ import { AwardsImage } from '../AwardsImage/AwardsImage';
 
 import './Awards.scss';
 
-export const Awards = ({
+export const Award = ({
 	imgTitle,
 	imgSubtitle,
 	imgPlace,
 	imgYear,
-	textTitle,
-	textSubTitle,
+	nombrePremio,
+	subTextoPremio,
 }) => {
-	return (
+		return (
 		<div className='awards-container'>
 			<AwardsImage
 				imgPlace={imgPlace}
@@ -20,8 +20,8 @@ export const Awards = ({
 				key={imgTitle}
 			/>
 			<div className='awards-text'>
-				<span className='awards-text-title'>{textTitle}</span>
-				<span className='awards-text-subtitle'>{textSubTitle}</span>
+				<span className='awards-text-title'>{nombrePremio}</span>
+				<span className='awards-text-subtitle'>{subTextoPremio}</span>
 			</div>
 		</div>
 	);

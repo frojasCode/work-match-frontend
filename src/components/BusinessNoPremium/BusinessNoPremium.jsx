@@ -1,88 +1,60 @@
 import { AvisosPublicados } from '../AvisosPublicados/AvisosPublicados';
-import { Awards } from '../Awards/Awards';
 import { BusinessInformation } from '../BusinessInformation/BusinessInformation';
-import { Certification } from '../Certification/Certification';
 import { BusinessCard } from '../../components/BusinessCard/BusinessCard';
 
 import './BusinessNoPremium.scss';
 import { BusinessNoCard } from '../BusinessNoCard/BusinessNoCard';
-export const BusinessNoPremium = () => {
+import { AwardsContainer } from '../AwardsContainer/AwardsContainer';
+import { CertificationContainer } from '../CertificationContainer/CertificationContainer';
+
+export const BusinessNoPremium = (props) => {
+	const businessInfo = props?.bussinesInfo?.attributes;
 	return (
 		<>
-			<BusinessNoCard />
-
+			<BusinessNoCard businessInfo={props?.bussinesInfo}/>
 			<BusinessInformation
-				text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae elit est. Praesent sit amet rhoncus magna elitar...'
+				text={businessInfo?.por_que_nosotros}
 				title='¿Por qué nosotros?'
 				key='¿Por qué nosotros?'
 				showButton={true}
 			>
 				<>
-					<BusinessInformation text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae elit est. Praesent sit amet rhoncus magna elitar..."}/>
-					<BusinessInformation text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae elit est. Praesent sit amet rhoncus magna elitar..."}/>
+					<BusinessInformation
+						text={
+							'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae elit est. Praesent sit amet rhoncus magna elitar...'
+						}
+					/>
+					<BusinessInformation
+						text={
+							'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae elit est. Praesent sit amet rhoncus magna elitar...'
+						}
+					/>
 				</>
 			</BusinessInformation>
-
 			<BusinessInformation
 				title='¿En qué creemos?'
-				text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae elit est.'
+				text={businessInfo?.mision}
 				key='¿En qué creemos?'
 				showButton={true}
 				subTitle='Misión'
 			>
 				<>
-				<BusinessInformation subTitle={"Vision"} text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae elit est."/>
-				<BusinessInformation valores={["test1","test2", "test3", "test4"]}/>
-				 </>
+					<BusinessInformation
+						subTitle={'Vision'}
+						text={businessInfo?.vision}
+					/>
+					<BusinessInformation valores={['test1', 'test2', 'test3', 'test4']} />
+				</>
 			</BusinessInformation>
 
-			<AvisosPublicados />
+			{businessInfo?.puestos_publicados && (
+				<AvisosPublicados urlAvisos={businessInfo?.puestos_publicados} />
+			)}
 
-			<h2 className='business-information-sub-title'>Premios</h2>
+			<AwardsContainer awardsList={businessInfo?.premios} />
 
-			<Awards
-				textTitle='Great Place to Work'
-				textSubTitle='Produccion y operaciones'
-				imgPlace={1}
-				imgSubtitle='Producciones y Operaciones'
-				imgTitle='GPTW'
-				imgYear={2022}
-				key={Math.random()}
-			/>
-
-			<Awards
-				textTitle='Merco'
-				textSubTitle='Responsabilad ESG'
-				imgPlace={1}
-				imgSubtitle='Responsabilidad ESG'
-				imgTitle='Merco'
-				imgYear={2022}
-				key={Math.random()}
-			/>
-
-			<Awards
-				textTitle='ABE'
-				textSubTitle='Aprendizaje y desarrollo de personas'
-				imgPlace={1}
-				imgSubtitle='Aprendizaje y Desarrollo de personas'
-				imgTitle='ABE'
-				imgYear={2022}
-				key={Math.random()}
-			/>
-
-			<h2 className='business-information-sub-title'>Certificados</h2>
-
-			<Certification
-				isoNumber={100400}
-				year={2022}
-				key={100400}
-				certificationName='Nombre del certificado'
-			/>
-			<Certification
-				isoNumber={100500}
-				year={2022}
-				key={100500}
-				certificationName='Nombre del certificado'
+			<CertificationContainer
+				certificationData={businessInfo?.certificaciones}
 			/>
 
 			<div className='other-business'>

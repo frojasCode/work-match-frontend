@@ -7,11 +7,11 @@ import bookmarkIcon from '../../assets/BusinessCard/bookmark.svg'
 import { useNavigate } from 'react-router';
 
 export const BusinessCard = ({
-	id,
+	ruc,
 	name,
 	logoUrl,
 	links,
-	area,
+	sector,
 	workerSize,
 	isSaved,
 	isPremium = false,
@@ -19,7 +19,7 @@ export const BusinessCard = ({
 	const navigate = useNavigate();
 	// TODO: Improve bookmark icon
 	const handleClick = () => {
-		navigate(`/business/${id}`)
+		navigate(`/business/${ruc}`)
 	}
 	return (
 		<div className='business-card' onClick={handleClick}>
@@ -38,7 +38,7 @@ export const BusinessCard = ({
 				<div className='business-info'>
 					<div className='business-info-area'>
 						<img src={folderIcon} alt='user Icon' />
-						Sector {area}
+						Sector {sector}
 					</div>
 					<span className='hr'></span>
 					<div className='business-info-worker-size'>
