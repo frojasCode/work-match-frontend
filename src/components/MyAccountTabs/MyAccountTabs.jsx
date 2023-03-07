@@ -26,10 +26,13 @@ export const MyAccountTabs = () => {
 			<div className='my-account-tabs-wrapper'>
 				{currentTab == 'TuCuenta' && (
 					<div className='my-account-content'>
-						<MyAccountCard userName={"Marcos Nieto"} userEmail={"marcosnieto@gmail.com"}/>
+						<MyAccountCard
+							userName={'Marcos Nieto'}
+							userEmail={'marcosnieto@gmail.com'}
+						/>
 					</div>
 				)}
-                {currentTab == 'EmpresasGuardadas' && (
+				{currentTab == 'EmpresasGuardadas' && (
 					<div className='my-account-contentmy-account-content'>
 						<Search />
 					</div>

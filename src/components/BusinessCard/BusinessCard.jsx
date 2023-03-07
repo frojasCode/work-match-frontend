@@ -3,7 +3,7 @@ import './BusinessCard.scss';
 
 import userIcon from '../../assets/BusinessCard/user.svg';
 import folderIcon from '../../assets/BusinessCard/folder.svg';
-import bookmarkIcon from '../../assets/BusinessCard/bookmark.svg'
+import bookmarkIcon from '../../assets/BusinessCard/bookmark.svg';
 import { useNavigate } from 'react-router';
 
 export const BusinessCard = ({
@@ -19,8 +19,8 @@ export const BusinessCard = ({
 	const navigate = useNavigate();
 	// TODO: Improve bookmark icon
 	const handleClick = () => {
-		navigate(`/business/${ruc}`)
-	}
+		navigate(`/business/${ruc}`);
+	};
 	return (
 		<div className='business-card' onClick={handleClick}>
 			<div className='business-info-title'>
@@ -46,7 +46,7 @@ export const BusinessCard = ({
 						{workerSize}
 					</div>
 				</div>
-				<img src={bookmarkIcon} alt='bookmark icon' className='img-bookmark'/>
+				<img src={bookmarkIcon} alt='bookmark icon' className='img-bookmark' />
 			</div>
 		</div>
 	);
