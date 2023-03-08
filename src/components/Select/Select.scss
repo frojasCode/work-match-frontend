@@ -39,13 +39,24 @@
         background-color: $color-white;
         box-shadow: $shadow-field;
         border-radius: $radius-8;
-        overflow: hidden;
+        height: 180px;
+        overflow-y: scroll;
         width: 100%;
         position: absolute;
         top: 83px;
         left: 0;
         display: none;
         z-index: 10;
+
+        &::-webkit-scrollbar{
+            width: 10px;
+            background-color: $color-white;
+        }
+
+        &::-webkit-scrollbar-thumb{
+            background-color: $color-primary;
+            border-radius: 8px;
+        }
 
         & .selectOpion{
             cursor: pointer;
