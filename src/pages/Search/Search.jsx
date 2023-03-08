@@ -21,29 +21,41 @@ export const Search = () => {
 	const currentPage = +queryString.get('page') ?? 1;
 
 	const filterStringBuilder = (queryName, query) =>
-		`filters[${queryName}]=${query}`;
+		`filters[${queryName}]${query}`;
 
 	const filterArray = [];
 
 	sectorEconomicoQuery
 		? filterArray.push(
-				filterStringBuilder('sector_economico', sectorEconomicoQuery)
+				filterStringBuilder('sector_economico', '=' + sectorEconomicoQuery)
 		  )
 		: '';
 	regionQuery
-		? filterArray.push(filterStringBuilder('region', regionQuery))
+		? filterArray.push(filterStringBuilder('region', '=' + regionQuery))
 		: '';
 	sizeBusinessQuery
-		? filterArray.push(filterStringBuilder('tamaño', sizeBusinessQuery))
+		? filterArray.push(filterStringBuilder('tamaño', '=' + sizeBusinessQuery))
 		: '';
 	propositoQuery
-		? filterArray.push(filterStringBuilder('proposito', '[$null]=false'))
+		? filterArray.push(
+				filterStringBuilder(
+					'valores',
+					'[$null]=false&filters[por_que_nosotros][$null]=false'
+				)
+		  )
 		: '';
 	premiosQuery
-		? filterArray.push(filterStringBuilder('premios', '[$null]=false'))
+		? filterArray.push(
+				filterStringBuilder(
+					'premios',
+					'[$null]=false&filters[certificaciones][$null]=false'
+				)
+		  )
 		: '';
 	avisoPublicadoQuery
-		? filterArray.push(filterStringBuilder('avisos', '[$null]=false'))
+		? filterArray.push(
+				filterStringBuilder('puestos_publicados', '[$null]=false')
+		  )
 		: '';
 
 	const offSetIncrement = 12;
