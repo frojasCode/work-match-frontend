@@ -1,4 +1,3 @@
-import { NavComponent } from '../../components/Nav/Nav';
 import IllustrationHeader from '../../assets/illustrations/illustration-home-header.png';
 import IllustrationFooter from '../../assets/illustrations/illustration-home-footer.png';
 import { Polygon } from '../../assets/icons/Polygon';
@@ -10,12 +9,45 @@ import { Select } from '../../components/Select/Select';
 import { Switch } from '../../components/Switch/Switch';
 import { useNavigate } from 'react-router-dom';
 
+import { sectores_economicos } from './data/sectores_economicos';
+import { regiones } from './data/regiones';
+import { useState } from 'react';
+
 export function Home() {
 	const navigate = useNavigate();
 
+	const [sectorEconomico, setSectorEconomico] = useState('');
+	const [region, setRegion] = useState('');
+	const [sizeBusiness, setSizeBusiness] = useState(0);
+	const [propositoSwitch, setPropositoSwitch] = useState(false);
+	const [premiosCertificacionesSwitch, setPremiosCertificacionesSwitch] =
+		useState(false);
+	const [avisoPublicadosSwitch, setAvisosPublicadosSwitch] = useState(false);
+
 	const handleClick = () => {
-		navigate("search")
-	}
+		const queryArray = [];
+
+		!!sectorEconomico.length
+			? queryArray.push(`sectorEconomico=${sectorEconomico}`)
+			: '';
+		!!region.length ? queryArray.push(`region=${region}`) : '';
+		!!sizeBusiness.length ? queryArray.push(`tamaño=${sizeBusiness}`) : '';
+		propositoSwitch ? queryArray.push(`proposito=${true}`) : '';
+		premiosCertificacionesSwitch ? queryArray.push(`premios=${true}`) : '';
+		avisoPublicadosSwitch ? queryArray.push(`avisos=${true}`) : '';
+
+		let queryString = '';
+
+		if (!!queryArray.length) {
+			queryString = '?' + queryArray.join('&');
+		}
+
+		const navigateUrl = !!queryString.length
+			? `search${queryString}`
+			: 'search';
+
+		navigate(navigateUrl);
+	};
 	return (
 		<>
 			<section className='home'>
@@ -49,26 +81,38 @@ export function Home() {
 							<h1>¿Qué es lo más importante para ti?</h1>
 						</div>
 						<div className='homeMain-inputs'>
-							<Select options={["Sector1","Sector2", "Sector3"]}>
-								El <span>sector económico:</span>
-							</Select>
-							<Select options={["Sector1","Sector2", "Sector3"]}>
-								¿En <span>región</span> opera?
-							</Select>
-							<Select options={["Sector1","Sector2", "Sector3"]}>
-								Selecciona el <span>tamaño de la empresa:</span>
-							</Select>
-							<Switch>
+							<Select
+								options={sectores_economicos}
+								label='El'
+								labelBold='sector económico:'
+								setData={setSectorEconomico}
+							/>
+							<Select
+								options={regiones}
+								label='¿En qué'
+								labelBold='región'
+								labelAfterBold='opera?'
+								setData={setRegion}
+							/>
+							<Select
+								options={['Sector1', 'Sector2', 'Sector3']}
+								label='Selecciona el'
+								labelAfterBold='tamaño de la empresa:'
+								setData={setSizeBusiness}
+							/>
+							<Switch setData={setPropositoSwitch}>
 								Ver empresas que tengan <span>propósito y valores:</span>
 							</Switch>
-							<Switch>
+							<Switch setData={setPremiosCertificacionesSwitch}>
 								Empresas con <span>premios y certificaciones:</span>
 							</Switch>
-							<Switch>
+							<Switch setData={setAvisosPublicadosSwitch}>
 								Empresas con <span>avisos publicados:</span>
 							</Switch>
 
-							<button className='btn-primary' onClick={handleClick}>Buscar</button>
+							<button className='btn-primary' onClick={handleClick}>
+								Buscar
+							</button>
 						</div>
 					</div>
 					<div className='homeMain-illustration'>

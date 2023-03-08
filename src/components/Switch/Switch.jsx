@@ -1,14 +1,15 @@
 import { useState } from 'react';
 
-export function Switch({ children }) {
+export function Switch({ children, setData }) {
 	const [switchActive, setSwitchActive] = useState(false);
 
 	let switchState = switchActive
 		? 'switchToggle-icon active'
 		: 'switchToggle-icon';
 
-	function changeToggleState() {
-		return setSwitchActive(!switchActive);
+	const changeToggleState = () => {
+		setData(!switchActive);
+		setSwitchActive(!switchActive);
 	}
 
 	return (

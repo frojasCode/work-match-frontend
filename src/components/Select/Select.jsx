@@ -3,10 +3,16 @@ import { IconChevronDown } from '@tabler/icons-react';
 import { size24, colorPrimary } from '../../assets/icons/variablesIcons';
 import { SelectOption } from '../SelectOption/SelectOption';
 
-export function Select({ children, label, labelBold, options }) {
+export function Select({
+	children,
+	label,
+	labelBold,
+	options,
+	labelAfterBold = '',
+	setData
+}) {
 	const [active, setActive] = useState(false);
 	const [defaultValue, setDefaultValue] = useState('Seleccionar');
-
 	const inputRef = useRef(null);
 
 	useEffect(() => {
@@ -28,7 +34,7 @@ export function Select({ children, label, labelBold, options }) {
 	return (
 		<div className='selectContainer'>
 			<div className='selectLabel'>
-				{label} <span>{labelBold}</span>
+				{label} <span>{labelBold}</span> {labelAfterBold}
 			</div>
 			<button
 				className='selectSelected'
@@ -44,7 +50,13 @@ export function Select({ children, label, labelBold, options }) {
 					/>
 				</div>
 			</button>
-			<SelectOption options={options} active={active} setActive={setActive} setDefaultValue={setDefaultValue}/>
+			<SelectOption
+				options={options}
+				active={active}
+				setActive={setActive}
+				setDefaultValue={setDefaultValue}
+				setData={setData}
+			/>
 		</div>
 	);
 }
