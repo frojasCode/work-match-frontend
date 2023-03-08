@@ -43,7 +43,7 @@ export const BusinessCard = ({
 					<span className='hr'></span>
 					<div className='business-info-worker-size'>
 						<img src={userIcon} alt='user Icon' />
-						{workerSize}
+						{workerSize} trabajadores
 					</div>
 				</div>
 				<img src={bookmarkIcon} alt='bookmark icon' className='img-bookmark' />
