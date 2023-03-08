@@ -97,7 +97,7 @@ export const Search = () => {
 					<BusinessCard
 						ruc={business.ruc}
 						name={business.nombre}
-						logoUrl={business.attributes?.logo?.data?.attributes?.url}
+						logoUrl={"https://htmlcolorcodes.com/assets/images/colors/gray-color-solid-background-1920x1080.png"}
 						links={handlePremiosPropositosAvisos(business)}
 						sector={business.sector_economico}
 						workerSize={business.trabajadores}
