@@ -21,7 +21,7 @@ export const Search = () => {
 	const currentPage = +queryString.get('page') ?? 1;
 
 	const filterStringBuilder = (queryName, query) =>
-		`filters[${queryName}]:${query}`;
+		`filters[${queryName}]=${query}`;
 
 	const filterArray = [];
 
