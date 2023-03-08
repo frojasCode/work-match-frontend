@@ -17,7 +17,7 @@ export const BusinessNoCard = ({businessInfo}, {imgNegativeMT = "0px"}) => {
 				</div>
 				<img src={bookmarkIcon} alt='bookmark icon' />
 			</div>
-			<span className='business-no-card-title'>{businessInfo?.nombre}</span>
+			<span className='business-no-card-title'>{businessInfo?.attributes?.nombre}</span>
 			<div className='business-no-card-info-container'>
 				<div className='business-no-card-info'>
 					<img src={folderIcon} alt='folder icon' />
